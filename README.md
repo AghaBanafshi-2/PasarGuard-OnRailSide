@@ -6,7 +6,6 @@
 
 <h1>PasarGuard</h1>
 <p><sub>AghaBanafshi Edition</sub></p>
-<p><sub>AghaBanafshi Edition</sub></p>
 
 <p><b>پنل نمایندگی حرفه‌ای، رایگان و متن‌باز بر پایه‌ی PasarGuard</b><br>
 یک Fork تا یک سرویس کامل: پنل، هسته‌ی Xray و 5 کانفیگ آماده، همه روی Railway</p>
@@ -335,7 +334,7 @@ flowchart LR
 
 1. برو **کاربران ← ساخت کاربر**.
 2. یک **نام کاربری** بنویس.
-3. از بخش قالب، یکی رو انتخاب کن. مثلاً `30GB - 30 روز` (گروه PasarGuard، 4 کانفیگ) یا `Pro 30GB - 30 روز` (گروه Pasarguard پرو، 1 کانفیگ).
+3. از بخش قالب، یکی رو انتخاب کن. مثلاً `30GB - 30 روز` (گروه PasarGuard، 4 کانفیگ) یا `Pro 30GB - 30 روز` (گروه PasarGuard پرو، 1 کانفیگ).
 4. ذخیره کن. حجم، تاریخ انقضا و کانفیگ‌ها خودکار تنظیم میشن.
 5. روی کاربر بزن و **لینک اشتراک** رو کپی کن و برای مشتری بفرست.
 
@@ -418,7 +417,7 @@ flowchart LR
 
 | گروه | کانفیگ | پروتکل | انتقال | اثرانگشت TLS | ویژگی |
 |---|---|---|---|---|---|
-| **Pasarguard پرو** | 𝗣𝗿𝗼 | VLESS | WebSocket + Early Data | Chrome | تک‌کانفیگ با کمترین پینگ |
+| **PasarGuard پرو** | 𝗣𝗿𝗼 | VLESS | WebSocket + Early Data | Chrome | تک‌کانفیگ با کمترین پینگ |
 | **PasarGuard** | ⚡ 𝗙𝗹𝗮𝘀𝗵 | VLESS | WebSocket | Firefox | سریع و سبک |
 | | 🔥 𝗙𝗶𝗿𝗲 | Trojan | WebSocket | Safari | مناسب iOS |
 | | 💎 𝗗𝗶𝗮𝗺𝗼𝗻𝗱 | VMess | WebSocket | Edge | سازگاری با اپ‌های قدیمی |
@@ -427,11 +426,11 @@ flowchart LR
 اسم کانفیگ‌ها توی اپ کاربر با فونت مخصوص دیده میشه:
 
 ```text
-𝗣𝗿𝗼 | Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard
-⚡ 𝗙𝗹𝗮𝘀𝗵 | Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard
-🔥 𝗙𝗶𝗿𝗲 | Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard
-💎 𝗗𝗶𝗮𝗺𝗼𝗻𝗱 | Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard
-🌙 𝗡𝗶𝗴𝗵𝘁 | Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard
+𝗣𝗿𝗼 | PasarGuard | AghaBanafshi Edition
+⚡ 𝗙𝗹𝗮𝘀𝗵 | PasarGuard | AghaBanafshi Edition
+🔥 𝗙𝗶𝗿𝗲 | PasarGuard | AghaBanafshi Edition
+💎 𝗗𝗶𝗮𝗺𝗼𝗻𝗱 | PasarGuard | AghaBanafshi Edition
+🌙 𝗡𝗶𝗴𝗵𝘁 | PasarGuard | AghaBanafshi Edition
 ```
 
 متن بعد از اسم رو با متغیر `CONFIG_TITLE` هر چی بخوای عوض کن.
@@ -466,7 +465,7 @@ https://YOUR-DOMAIN/sub/<token>
 | گروه | قالب‌های فروش آماده |
 |---|---|
 | **PasarGuard** | 10، 30، 50 و 100 گیگ (30 روزه) · 200 گیگ (60 روزه) · نامحدود (30 روزه) |
-| **Pasarguard پرو** | Pro 30، 50 و 100 گیگ · Pro نامحدود (همه 30 روزه) |
+| **PasarGuard پرو** | Pro 30، 50 و 100 گیگ · Pro نامحدود (همه 30 روزه) |
 
 **منوی پنل**: داشبورد · کاربران · کلیدهای API · قالب‌ها · عملیات گروهی · تنظیمات · پشتیبانی
 
@@ -482,7 +481,7 @@ https://YOUR-DOMAIN/sub/<token>
 - تاریخ انقضا به **تقویم شمسی** و هشدار نزدیک شدن به پایان حجم یا زمان
 - حلقه‌ی مصرف با حجم مصرف‌شده، باقی‌مانده و کل حجم
 - **پینگ زنده‌ی سرور** از گوشی کاربر با برچسب کیفیت و آنتن
-- لینک اشتراک با **QR داخلی** (لوگوی Pasarguard وسطش) و کپی همه‌ی کانفیگ‌ها
+- لینک اشتراک با **QR داخلی** (لوگوی PasarGuard وسطش) و کپی همه‌ی کانفیگ‌ها
 - اتصال با یک لمس به V2Box، v2rayNG، Hiddify، Streisand، Happ و NekoBox، با دکمه‌ی شناور «اتصال سریع»
 - فهرست کانفیگ‌ها با آیکون اختصاصی، برچسب پروتکل، QR هر کانفیگ و کپی سریع
 - سبک و روان روی گوشی‌های ضعیف هم (60 فریم)، بدون هیچ سرویس بیرونی
@@ -555,7 +554,7 @@ flowchart LR
 
 | متغیر | پیش‌فرض | کاربرد |
 |---|---|---|
-| `CONFIG_TITLE` | `Pasarguard \| 𝙎𝙪𝙥𝙚𝙧 PasarGuard` | متنی که بعد از اسم هر کانفیگ دیده میشه |
+| `CONFIG_TITLE` | `PasarGuard \| AghaBanafshi Edition` | متنی که بعد از اسم هر کانفیگ دیده میشه |
 | `SUBSCRIPTION_PATH` | `sub` | مسیر لینک اشتراک |
 | `PUBLIC_DOMAIN` | دامنه‌ی Railway | فقط برای دامنه‌ی شخصی یا Cloudflare |
 | `DEMO_RESELLER` | `on` | با `off` نماینده‌ی نمونه ساخته نمیشه |
@@ -692,10 +691,10 @@ flowchart LR
 
 <div align="center">
 
-<a href="https://t.me/+WvKFv0lU_i5lNGE0"><img src="https://img.shields.io/badge/Join-%D8%AC%DB%8C%D9%86%DA%A9%D8%B3%20%7C%20Super%20PasarGuard-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Join Channel"></a>
+<a href="https://t.me/+WvKFv0lU_i5lNGE0"><img src="https://img.shields.io/badge/Join-PasarGuard%20%7C%20AghaBanafshi%20Edition-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Join Channel"></a>
 
 آپدیت‌ها، آموزش‌ها و پشتیبانی فقط از طریق کانال رسمی<br>
-**[Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard](https://t.me/+WvKFv0lU_i5lNGE0)**
+**[PasarGuard | AghaBanafshi Edition](https://t.me/+WvKFv0lU_i5lNGE0)**
 
 اگه این پروژه به کارت اومد، با یک **Star** حمایتش کن.
 
