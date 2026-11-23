@@ -1,4 +1,4 @@
-"""Super JinX bootstrap: zero-touch setup for PasarGuard on Railway. Idempotent: safe on every boot."""
+"""PasarGuard bootstrap: zero-touch setup for PasarGuard on Railway. Idempotent: safe on every boot."""
 import json, os, sys, threading, time, urllib.error, urllib.parse, urllib.request
 
 BASE = "http://127.0.0.1:8000"
@@ -7,16 +7,16 @@ DOMAIN = (os.getenv("PUBLIC_DOMAIN") or os.getenv("RAILWAY_PUBLIC_DOMAIN") or ""
 import subprocess
 USER, PASS = "admin", "admin"          # first-boot login; change it later in the panel or with the owner key
 RESELLER_USER, RESELLER_PASS, RESELLER_GB = "reseller", "reseller", 50
-CORE_NAME, NODE_NAME = "JinX-Core", "JinX-Core"
-PRO_GROUP, STD_GROUP = "جینکس پرو", "𝗝𝗶𝗻𝗫"   # 1 premium config / 4 different configs
+CORE_NAME, NODE_NAME = "PasarGuard-Core", "PasarGuard-Core"
+PRO_GROUP, STD_GROUP = "Pasarguard پرو", "PasarGuard"   # 1 premium config / 4 different configs
 OLD_GROUP = "jinx-all"                         # from earlier versions, renamed to STD_GROUP (keeps its users)
-TITLE = os.getenv("CONFIG_TITLE", "جینکس | 𝙎𝙪𝙥𝙚𝙧 𝗝𝗶𝗻𝗫")   # shown after every config name
+TITLE = os.getenv("CONFIG_TITLE", "PasarGuard | AghaBanafshi Edition")   # shown after every config name
 GB = 1024 ** 3
 DAY = 86400
 
 # All configs go through Railway's TLS edge on 443 with alpn=http/1.1 (the only thing Railway serves).
-# جینکس پرو: the single most compatible + lowest-latency setup: VLESS + WebSocket + early data, Chrome fp.
-# 𝗝𝗶𝗻𝗫: 4 configs that are really different (protocol / transport / fingerprint / path), all supported
+# Pasarguard پرو: the single most compatible + lowest-latency setup: VLESS + WebSocket + early data, Chrome fp.
+# PasarGuard: 4 configs that are really different (protocol / transport / fingerprint / path), all supported
 #        by v2rayNG, V2Box, Hiddify, Streisand, NekoBox, Happ, Clash Meta and sing-box.
 # ?ed=2560 = early data: the first packet rides on the handshake -> one round trip less per connection.
 INBOUNDS = [
@@ -385,7 +385,7 @@ def ensure_hosts():
         log("WARNING: no public domain yet (Settings > Networking > Generate Domain), hosts skipped"); return
     existing = as_list(must("GET", "/api/hosts"), "hosts")
     wanted = {i[0] for i in INBOUNDS}
-    for h in existing:  # clean hosts left from older JinX versions
+    for h in existing:  # clean hosts left from older PasarGuard versions
         if str(h.get("inbound_tag") or "").startswith("JX-") and h.get("inbound_tag") not in wanted:
             req("DELETE", f"/api/host/{h['id']}")
     changed = 0
@@ -500,7 +500,7 @@ def remove_demo_user():
             log("removed old auto-created test user", name) if c in (200, 204) else log(f"could not remove {name}: {c}")
 
 def attach_orphans(gids):
-    """Users created without a group are put in the 𝗝𝗶𝗻𝗫 group (4 configs). Users with a group are never touched."""
+    """Users created without a group are put in the PasarGuard group (4 configs). Users with a group are never touched."""
     code, res = req("GET", "/api/users?no_group=true&limit=200")
     if code == 401:
         login(); code, res = req("GET", "/api/users?no_group=true&limit=200")
@@ -607,7 +607,7 @@ def sub_guard():
             if not st["path"] or time.time() - st["t"] > 60:
                 st["path"], st["t"] = first_sub_path(), time.time()
             if st["path"]:
-                ua = "Mozilla/5.0 (iPhone) JinX-Guard" if i % 2 == 0 else "v2rayNG/1.9 JinX-Guard"
+                ua = "Mozilla/5.0 (iPhone) PasarGuard-Guard" if i % 2 == 0 else "v2rayNG/1.9 PasarGuard-Guard"
                 if probe_sub(st["path"], ua):
                     if st["bad"]: log("sub-guard: subscription links are fine again"); said.clear()
                     st["bad"] = 0
