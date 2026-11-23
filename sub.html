@@ -252,7 +252,7 @@ html[dir=rtl] .fl{transform:scaleX(-1)}
 
 <main class="wrap">
   <div class="top rv">
-    <div class="brand"><div class="mk"><svg width="22" height="22"><use href="#i-bolt2"/></svg></div><div class="bn"><b>PasarGuard</b><span data-t="tag"></span></div></div>
+    <div class="brand"><div class="mk"><svg width="22" height="22"><use href="#i-bolt2"/></svg></div><div class="bn"><b>PasarGuard</b><span data-t="tag"></span><small class="edition">AghaBanafshi Edition</small></div></div>
     <div class="seg" id="seg"><i id="segI"></i><button type="button" data-l="fa">FA</button><button type="button" data-l="en">EN</button></div>
   </div>
 
@@ -658,7 +658,7 @@ function openSheet(i){cur=i;$("shT").textContent=CFG[i].name;
  if(!drawQr(links[i],$("qrc2"),links[i].length>1100?"L":"M"))return toast(L().copyFail,true);
  $("ov").classList.add("on");$("ov").setAttribute("aria-hidden","false");document.body.classList.add("lock");buzz()}
 function closeSheet(){$("ov").classList.remove("on");$("ov").setAttribute("aria-hidden","true");document.body.classList.remove("lock")}
-function saveQr(){var c=$("qrc2");try{c.toBlob(function(b){if(!b)throw 0;var u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="SuperPasarGuard-QR.png";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);toast(L().saved)},"image/png")}catch(e){try{window.open(c.toDataURL("image/png"),"_blank")}catch(x){}}}
+function saveQr(){var c=$("qrc2");try{c.toBlob(function(b){if(!b)throw 0;var u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="PasarGuard-QR.png";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);toast(L().saved)},"image/png")}catch(e){try{window.open(c.toDataURL("image/png"),"_blank")}catch(x){}}}
 
 /* ---------- events (one listener, no leaks) ---------- */
 document.addEventListener("click",function(e){
