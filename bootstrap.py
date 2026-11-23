@@ -10,7 +10,7 @@ RESELLER_USER, RESELLER_PASS, RESELLER_GB = "reseller", "reseller", 50
 CORE_NAME, NODE_NAME = "PasarGuard-Core", "PasarGuard-Core"
 PRO_GROUP, STD_GROUP = "Pasarguard پرو", "PasarGuard"   # 1 premium config / 4 different configs
 OLD_GROUP = "jinx-all"                         # from earlier versions, renamed to STD_GROUP (keeps its users)
-TITLE = os.getenv("CONFIG_TITLE", "Pasarguard | 𝙎𝙪𝙥𝙚𝙧 PasarGuard")   # shown after every config name
+TITLE = os.getenv("CONFIG_TITLE", "PasarGuard | AghaBanafshi Edition")   # shown after every config name
 GB = 1024 ** 3
 DAY = 86400
 
