@@ -105,7 +105,7 @@ flowchart LR
 **PasarGuard** یک پنل نمایندگی کامل و آماده‌ی فروشه که روی [PasarGuard](https://github.com/PasarGuard/panel) ساخته شده. پنل، هسته‌ی Xray و وب‌سرور همه داخل **یک سرویس** روی Railway اجرا میشن و همه‌ی تنظیمات **خودکار** انجام میشه: اینباندها، هاست‌ها، گروه‌ها، قالب‌های فروش، نقش نماینده و صفحه‌ی اشتراک.
 
 <a id="why"></a>
-### <img src="ic-why.svg" width="24" align="center"> &nbsp;چرا PasarGuard؟
+### <img src="ic-why.svg" width="24" align="center"> &nbsp;چرا AghaBanafshi Edition؟
 
 | | پنل معمولی روی VPS | **PasarGuard** |
 |---|:---:|:---:|
