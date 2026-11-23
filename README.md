@@ -6,6 +6,7 @@
 
 <h1>PasarGuard</h1>
 <p><sub>AghaBanafshi Edition</sub></p>
+<p><sub>AghaBanafshi Edition</sub></p>
 
 <p><b>پنل نمایندگی حرفه‌ای، رایگان و متن‌باز بر پایه‌ی PasarGuard</b><br>
 یک Fork تا یک سرویس کامل: پنل، هسته‌ی Xray و 5 کانفیگ آماده، همه روی Railway</p>
